@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESPLAN - Sistema de Planejamento da Secretaria da Saúde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SESPLAN</h1>
+        <p>Sistema de Planejamento da Secretaria Municipal de Saúde de Joinville</p>
+    </header>
+
+    <div class="container">
+        <!-- Cadastro de Demandas -->
+        <div class="add-section">
+            <h2>📋 Cadastro de Demandas</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Ex: Solicitar manutenção do ar-condicionado na UBSF" 
+                        required>
+                    <button type="submit">
+                        ➕ Adicionar Tarefa
+                    </button>
+                </div>
+            </form>
+            <small>As tarefas são salvas automaticamente no navegador (localStorage)</small>
+        </div>
+
+        <!-- Painel de Tarefas -->
+        <div class="tasks-section">
+            <h2>📋 Painel de Tarefas</h2>
+            
+            <h3>⏳ Tarefas Pendentes</h3>
+            <ul id="pendingList" class="task-list"></ul>
+            
+            <h3>✅ Tarefas Concluídas</h3>
+            <ul id="completedList" class="task-list"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Pedro Paulo Hecht</p>
+        <p>Trabalho de Fábrica de Software • Universidade da Região de Joinville • 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
